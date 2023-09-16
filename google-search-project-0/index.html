@@ -3,15 +3,15 @@
     <head>
         <title>Google Search</title>
         <link rel="stylesheet" href="styling.css">
-        <meta http-equiv="refresh" content="5" >
+        <meta http-equiv="refresh" content="50" >
         <meta charset="UTF-8">
     </head>
-    <body>
+    <body >
        <header>
         <nav class="upper-nav">
-        
-            <div class="upper-nav-item"><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></div>
-            <div class="upper-nav-item"><a href="https://www.google.com/imghp?hl=en">Images</a></div>
+            
+            <a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a>
+            <a href="https://www.google.com/imghp?hl=en">Images</a>
             <div class="upper-nav-item">
                 <button class="bento-button"> 
                     <div class="bento-menu"> 
@@ -26,7 +26,7 @@
                     <div class="bento-dot"></div>
                 </button>
             </div>
-            <div class="item"><a href="https://myaccount.google.com/?hl=bg&utm_source=OGB&utm_medium=act"><img id="profile-pic" src="fish.png" alt="baloon fish"></a></div>
+            <a href="https://myaccount.google.com/?hl=bg&utm_source=OGB&utm_medium=act"><img id="profile-pic" src="fish.png" alt="baloon fish"></a>
          
         </nav>
        </header>
@@ -38,34 +38,54 @@
         <img src="googlelogo_color_272x92dp.png" alt="google-img">
        </div>
 
-        <form class="search-field" action="https://www.google.com/search">
+        <form  action="https://www.google.com/search">
+            <div class="search-field">
             <input class="input-field-bar" type="text" name="q">
             
-            <!-- kEYBOARD TOOLTIL -->
-            <div class="tooltip">
-            <button class="searchbar-keyboard-button" type="button" > <img class="keyboard" src="keyboard2.jpg" alt="keyboard"></button>
-                <div class="tooltiptext-keyboard">
-                      <p>Text input tools</p>
-                </div>
-            </div>
-            <!-- MICROPHONE TOOLTIL -->
-            <div class="tooltip">
-                <button class="searchbar-mic-button" type="button" > <img class="mic" src="Google_mic.png" alt="mic"></button>
-                    <div class="tooltiptext-mic">
-                          <p>Search by voice</p>
-                    </div>
-                </div>
-            <!-- SEARCH-BY-IMAGE TOOLTIL -->
-            <div class="tooltip">
-                <button class="searchbar-image-button" type="button" > <img class="image" src="search_by_image.png" alt="mic"></button>
-                    <div class="tooltiptext-image">
-                          <p>Search by image</p>
-                    </div>
-                </div>
+                <!-- kEYBOARD TOOLTIL -->
+            
+                <button class="searchbar-button" type="button" ><img class="keyboard" src="keyboard2.jpg" alt="keyboard">
+                    <span class="tooltiptext" id="keyboard-tooltip-pos">Text input tools</span>
+                </button>
 
-               
+                <!-- MIC TOOLTIL -->
+
+                <button class="searchbar-button" type="button" ><img class="mic" src="Google_mic.png" alt="keyboard">
+                    <span class="tooltiptext" id="mic-tooltip-pos">Search by voice</span>
+                </button>
+
+                <!-- IMAGE TOOLTIL -->
+
+                <button class="searchbar-button" type="button" ><img class="image" src="search_by_image.png" alt="keyboard">
+                    <span class="tooltiptext" id="image-tooltip-pos">Search by voice</span>
+                </button>
+            </div>
+            <center class="main-buttons">
+                <input class="search-button" type="submit" value="Google Search">
+                <input class="search-button" type="submit" value="I feel lucky">
+            </center>
+        
         </form>
-     <input class="search-button" type="submit" value="Google Search">
-     
+
+        
     </body>
+    <footer class="footer">
+        <div class="first-foot">
+            Bulgaria
+        </div>
+
+        <div class="second-foot">
+            <div class="left-part">
+                <a href="https://about.google/?utm_source=google-BG&utm_medium=referral&utm_campaign=hp-footer&fg=1">About us</a>
+                <a href="https://ads.google.com/intl/bg_bg/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+                <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Business</a>
+                <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search works</a>
+            </div>
+            <div class="right-part">
+                <a href="https://policies.google.com/privacy?hl=bg&fg=1">Confidentiality</a>
+                <a href="">Conditions</a>
+                <a href="">Settings</a>
+            </div>
+        </div>
+    </footer>
 </html>

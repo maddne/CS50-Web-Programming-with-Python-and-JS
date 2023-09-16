@@ -4,19 +4,21 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
     margin-top: 10px;
 }
-.upper-nav-item, a {
+.upper-nav a {
     text-decoration: none;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.search-area {
-    padding: 95px;
+.upper-nav a:hover {
+    text-decoration: underline;
 }
 .search-field {
     margin-top: 25px;
-    margin-left: 660px;
-    margin-right: 660px;
+    margin-left: 34.5%;
+    margin-right: 34.5%;
     text-align: center;
     display: flex;
     flex-direction:row;
@@ -29,7 +31,7 @@
 .input-field-bar {
     margin: left;
     padding: 14px;
-    width: 560px;
+    width: 100%;
     border-color: transparent;
     background: transparent;
     outline: none;
@@ -40,20 +42,17 @@
     background-position: 15px;
 }
 .keyboard {
-    
     width: 19px;
     height: 11px;
-    background-color: white;
+    background-color: transparent;
     border: none;
     
 }
 .mic {
-    
     width: 14px;
     height: 21px;
-    background-color: white;
+    background-color: transparent;
     border: none;
-    
 }
 .image {
     
@@ -73,96 +72,24 @@
     vertical-align: bottom;
     margin-right: 10px;
 }
-.searchbar-keyboard-button {
+#profile-pic:hover {
+    background-color: #f8f9fa;
+    outline: 5px solid #f8f9fa;
+    border-radius: 50%;
     
-    background-color: transparent;
-    border: none;
-    outline: none;
-    order: 1;
-}
-.searchbar-mic-button {
-    
-    background-color: transparent;
-    border: none;
-    outline: none;
-    order: 2;
-}
-.searchbar-image-button {
-    
-    background-color: transparent;
-    border: none;
-    outline: none;
-    order: 3;
-}
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-.tooltip .tooltiptext-keyboard {
-    font-family:'Times New Roman', Times, serif;    
-    visibility: hidden;
-    color: white;
-    text-align: center;
-    border-radius: 1px;
-    padding: 0.1px 0;
-    position: absolute;
-    z-index: 1;
-    border: 3px ridge white;
-    bottom: -100%;
-    left: -30%;
-    display: block;
-    background-color: black;
-    opacity: 0;
-}
-.tooltip:hover .tooltiptext-keyboard {
-  visibility: visible;
-  opacity: 1;
-}
-.tooltip .tooltiptext-mic {
-    font-family:'Times New Roman', Times, serif; 
-    visibility: hidden;
-    color: white;
-    text-align: center;
-    border-radius: 1px;
-    padding: 0.1px 3px;
-    position: absolute;
-    z-index: 1;
-    border: 3px ridge white;
-    bottom: -100%;
-    left: -30%;
-    display: block;
-    background-color: black;
-    opacity: 0;
-}
-.tooltip:hover .tooltiptext-mic {
-  visibility: visible;
-  opacity: 1;
-}
-.tooltip .tooltiptext-image {
-    font-family:'Times New Roman', Times, serif;
-    height: 5px;
-    visibility: hidden;
-    color: white;
-    text-align: center;
-    border-radius: 1px;
-    padding: 0.1px 0;
-    position: absolute;
-    z-index: 1;
-    border: 3px ridge white;
-    bottom: -100%;
-    left: -30%;
-    display: block;
-    background-color: black;
-    opacity: 0;
-}
-.tooltip:hover .tooltiptext-image {
-  visibility: visible;
-  opacity: 1;
 }
 .bento-button {
     background-color: transparent;
     outline: none;
     border: none;
+    /* height of the icon */
+    height: 43px;
+    /* width of the icon */
+    width: 43px;
+}
+.bento-button:hover {
+    background-color: #f8f9fa;
+    border-radius: 50%;
 }
 .bento-menu {
     display: grid;
@@ -174,7 +101,7 @@
     width : 16px;
     background-color: transparent;
     outline: none;
-    margin: 10px;
+    margin: auto;
 }
 .bento-dot {
     width : 4px;
@@ -185,7 +112,7 @@
     background-color: grey;
 }
 .empty-space {
-    padding: 95px;
+    padding: 100px;
 }
 #rainbow-name {
     display: inline;
@@ -196,7 +123,135 @@
     margin: auto;
     text-align: center;
 }
+.tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    color: white;
+    font-size: 16px;
+    background-color: black;
+    padding: 7px 15px 7px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    outline: 2px ridge white;
+}
 
+.tooltiptext::before {
+    content: "";
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: black;
+    padding: 5px;
+    z-index: 1;
+    top: -12%;
+    left: 45%;
+}
+
+.searchbar-button:hover .tooltiptext {
+  visibility: visible;
+  transition-delay: 0.2s;
+  
+}
+.searchbar-button {
+    position: relative;
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+#keyboard-tooltip-pos {
+    top: 37px;
+    left: -152%;
+}
+
+#mic-tooltip-pos {
+    top: 41px;
+    left: -193%;
+}
+
+#image-tooltip-pos {
+    top: 43px;
+    left: -90%;
+}
+.main-buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+    
+}
+.search-button {
+    cursor: pointer;
+    display: block;
+    padding: 10px 17px 10px 17px;
+    background-color: #f8f9fa;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.search-button:hover {
+    outline: 1.2px solid lightgray;
+}
+.footer {
+    color: #70757a;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    background-color: #f2f2f2;
+    position: absolute;
+    z-index: 999;
+    border-bottom: 1px solid #dadce0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+    
+    ;
+    
+}
+.footer a {
+    text-decoration: none;
+}
+.footer a:visited {
+    text-decoration: none;
+    color: #70757a
+}
+.first-foot {
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+}
+.second-foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;    
+}
+.left-part {
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+}
+
+.right-part {
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+}
+.second-foot a:hover {
+    text-decoration: underline;
+}
+
+html,body {
+    margin:0;
+    padding:0;
+    
+}
 
 
 
