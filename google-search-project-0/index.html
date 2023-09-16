@@ -8,25 +8,26 @@
     </head>
     <body>
        <header>
-        <nav>
-        <div class="blocks">
-            <div class="item"><a class="upper-nav" href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></div>
-            <div class="item"><a class="upper-nav" href="https://www.google.com/imghp?hl=en">Images</a></div>
-            <div class="item"><button > 
-                <div class="bento-menu"> 
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-                <div class="bento-dot"></div>
-              
-                </button></div>
+        <nav class="upper-nav">
+        
+            <div class="upper-nav-item"><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></div>
+            <div class="upper-nav-item"><a href="https://www.google.com/imghp?hl=en">Images</a></div>
+            <div class="upper-nav-item">
+                <button class="bento-button"> 
+                    <div class="bento-menu"> 
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                    <div class="bento-dot"></div>
+                </button>
+            </div>
             <div class="item"><a href="https://myaccount.google.com/?hl=bg&utm_source=OGB&utm_medium=act"><img id="profile-pic" src="fish.png" alt="baloon fish"></a></div>
-         </div>
+         
         </nav>
        </header>
 
@@ -39,10 +40,32 @@
 
         <form class="search-field" action="https://www.google.com/search">
             <input class="input-field-bar" type="text" name="q">
+            
+            <!-- kEYBOARD TOOLTIL -->
+            <div class="tooltip">
             <button class="searchbar-keyboard-button" type="button" > <img class="keyboard" src="keyboard2.jpg" alt="keyboard"></button>
+                <div class="tooltiptext-keyboard">
+                      <p>Text input tools</p>
+                </div>
+            </div>
+            <!-- MICROPHONE TOOLTIL -->
+            <div class="tooltip">
+                <button class="searchbar-mic-button" type="button" > <img class="mic" src="Google_mic.png" alt="mic"></button>
+                    <div class="tooltiptext-mic">
+                          <p>Search by voice</p>
+                    </div>
+                </div>
+            <!-- SEARCH-BY-IMAGE TOOLTIL -->
+            <div class="tooltip">
+                <button class="searchbar-image-button" type="button" > <img class="image" src="search_by_image.png" alt="mic"></button>
+                    <div class="tooltiptext-image">
+                          <p>Search by image</p>
+                    </div>
+                </div>
+
                
         </form>
      <input class="search-button" type="submit" value="Google Search">
-     <input class="test" type="text" name="q">
+     
     </body>
 </html>
